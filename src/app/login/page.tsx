@@ -23,6 +23,8 @@ const SignIn = () => {
     navigate.push("/")
   }
 
+  // else do nothing
+
   return (
     <div
       className="min-h-screen py-8 bg-cover bg-center"
