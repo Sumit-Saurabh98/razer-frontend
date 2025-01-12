@@ -8,11 +8,11 @@ import React, { useEffect } from 'react'
 
 const SingleProduct = ({ params }:{ params: { _id: string }}) => {
 
-  const {getSingleProduct, product, loadingProduct} = useProductStore();
+  const {getSingleProduct, product} = useProductStore();
 
   useEffect(() => {
     getSingleProduct(params._id);
-  }, []);
+  }, [getSingleProduct, params._id]);
 
   return (
     <div>

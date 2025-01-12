@@ -1,6 +1,5 @@
 
 import { MoveRight } from "lucide-react";
-import reflex from "@/lib/reflex";
 import { useEffect, useState } from "react";
 import { useCartStore } from "@/store/useCartStore";
 import Link from "next/link";
@@ -9,7 +8,7 @@ import { useRouter } from "next/navigation";
 const OrderSummary = () => {
     const router = useRouter();
   const [remaining, setRemaining] = useState(0);
-  const { total, subtotal, coupon, isCouponApplied, cart } = useCartStore();
+  const { total, subtotal, coupon, isCouponApplied} = useCartStore();
 
   const savings = subtotal - total;
   const formattedSubtotal = subtotal.toFixed(2);

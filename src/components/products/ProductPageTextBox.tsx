@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from 'next/image';
 
 // Text Decoration Components
 const ProductPageSmallGrayText = ({ t }: { t: string }) => {
@@ -48,7 +49,9 @@ export function ProductPageCard({ img, h1, t }: { img: string, h1: string, t: st
   return (
     <div className="text-white bg-[#111111] border-b border-[#44d62c]">
       <div className="bg-[#1a1a1a]">
-        <img 
+        <Image 
+        width={400}
+        height={400}
           src={img} 
           alt={h1} 
           className="w-full"

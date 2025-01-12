@@ -1,8 +1,8 @@
 import { Plus, Minus, Trash } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { CartBigWhiteText, CartGrayText } from "./CartTextDecoration";
 import { IProduct } from "@/store/useProductStore";
 import { useCartStore } from "@/store/useCartStore";
+import Image from "next/image";
 
 const CartProductCard = ({ item }:{item: IProduct}) => {
 
@@ -12,7 +12,7 @@ const CartProductCard = ({ item }:{item: IProduct}) => {
     <div className="flex justify-between py-5">
       <div className="flex w-3/5">
         <div className="mr-8">
-          <img className="w-[100px]" src={item.images[0]} alt={item.title} />
+          <Image width={400} height={400} className="w-[100px]" src={item.images[0]} alt={item.title} />
         </div>
         <div>
           <CartBigWhiteText t={item.title} />

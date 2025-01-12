@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useCartStore } from "@/store/useCartStore";
 import { useUserStore } from "@/store/useUserStore";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 const ProductCard = ({ product}: { product: IProduct }) => {
 
@@ -26,7 +27,9 @@ const ProductCard = ({ product}: { product: IProduct }) => {
   return (
     <Card className="bg-[#252525] text-white">
     <CardContent className="p-0">
-      <img 
+      <Image
+        width={300}
+        height={300}
         src={product.images[Math.floor(Math.random() * 5)]} 
         alt={product.title} 
         className="w-full mx-auto"

@@ -13,7 +13,7 @@ const Laptops = () => {
 
     useEffect(() => {
       getProducts();
-    }, []);
+    }, [getProducts]);
 
 
     if(loadingProduct) return <LoadingSpinner/>

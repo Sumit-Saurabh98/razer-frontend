@@ -1,5 +1,6 @@
 import React from 'react';
 import { ProductPageCard, ProductPageTextBox } from '@/components/products/ProductPageTextBox';
+import Image from 'next/image';
 
 
 const ProductPage = () => {
@@ -141,10 +142,12 @@ const ProductPage = () => {
 
       {/* Bottom Image Section */}
       <div className="w-full pb-5">
-        <img
+        <Image
           src="https://assets2.razerzone.com/images/pnx.assets/d20a9f320f5d60e2b92043b7d4cc2f7a/ms-audio-banner-desktop.jpg"
           alt="Banner"
           className="w-full object-cover"
+          width={1920}
+          height={1080}
         />
       </div>
     </div>

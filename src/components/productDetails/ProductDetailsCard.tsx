@@ -1,6 +1,6 @@
 "use client"
 import React, { useState} from "react";
-import { Truck, Store, ComponentIcon } from "lucide-react";
+import { Truck, Store} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -37,7 +37,6 @@ const ProductDetailsCard = ({ product }:{ product: IProduct}) => {
         <p className="text-[#44B10B] text-2xl font-bold pb-4">
           {product.title}
         </p>
-        ////
         <div className="w-full flex justify-evenly">
         <div>
           <div className="flex items-center pb-2">
@@ -157,9 +156,6 @@ const ProductDetailsCard = ({ product }:{ product: IProduct}) => {
           </Dialog>
         </div>
         </div>
-
-        //////
-
         <Button
           className="w-[40%] bg-[#44B10B] hover:bg-[#2e7806]"
           onClick={handleAddToCart}
