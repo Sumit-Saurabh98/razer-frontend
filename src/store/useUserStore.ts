@@ -65,8 +65,6 @@ export const useUserStore = create<UserStore>((set) => ({
       set({ user: res.data.user, signupLoading: false, checkingAuth: false });
 
       toast.success("Account created successfully");
-
-      window.location.href = "/login";
     } catch (error: unknown) {
       console.error(error);
       set({ signupLoading: false });
@@ -90,7 +88,6 @@ export const useUserStore = create<UserStore>((set) => ({
       set({ user: res.data.user, signinLoading: false, checkingAuth: false });
 
       toast.success("Logged in successfully");
-      window.location.href = "/";
     } catch (error: unknown) {
       console.error(error);
       set({ signinLoading: false });

@@ -3,19 +3,25 @@ import React, { useState } from "react";
 import { Eye, EyeOff, Chrome, MoveRight } from "lucide-react";
 import Link from "next/link";
 import { useUserStore } from "@/store/useUserStore";
+import { useRouter } from "next/navigation";
 
 const SignIn = () => {
+  const navigate = useRouter()
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { login, signinLoading } = useUserStore();
+  const { login, signinLoading, user } = useUserStore();
 
   const handleSubmit = () => {
     login(email, password);
     setEmail("");
     setPassword("");
   };
+
+  if(user) {
+    navigate.push("/")
+  }
 
   return (
     <div
